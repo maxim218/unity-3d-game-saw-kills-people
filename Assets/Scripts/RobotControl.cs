@@ -14,7 +14,24 @@ public class RobotControl : MonoBehaviour {
         _allowUpdate = false;
     }
     
+    private float CalculateDistanceFromCenter() {
+        Vector3 centerPos = Vector3.zero;
+        Vector3 heroPos = new Vector3(transform.position.x, 0, transform.position.z);
+        float distance = Vector3.Distance(centerPos, heroPos);
+        return distance;
+    }
+
+    private const float MaxAllowedDistance = 25.1f;
+
     private void Update() {
+        if (_allowUpdate) {
+            float distance = CalculateDistanceFromCenter();
+            if(distance > MaxAllowedDistance) {
+                WallControl script = FindObjectOfType<WallControl>();
+                script.KillHero();
+            }
+        }
+
         if (_allowUpdate) {
             transform.Translate(0, 0, forwardSpeed * Time.deltaTime);
             int direction = inputControlComp.GetDirection();

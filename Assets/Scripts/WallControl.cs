@@ -5,18 +5,22 @@ using UnityEngine;
 public class WallControl : MonoBehaviour {
     [SerializeField] private GameObject deadPrefab = null;
     
+    public void KillHero() {
+        RobotControl script = FindObjectOfType<RobotControl>();
+        script.MovingStop();
+
+        RunMenuAnimation();
+        ScoreControllerScript scoreController = FindObjectOfType<ScoreControllerScript>();
+        scoreController.FinalMessage();
+
+        GameObject dead = Instantiate(deadPrefab) as GameObject;
+        dead.transform.position = GameObject.Find("Robot").transform.position;
+        HideRobotParts();
+    }
+
     private void OnTriggerEnter(Collider other) {
         if (GameObject.Find("Robot") == other.gameObject) {
-            RobotControl script = FindObjectOfType<RobotControl>();
-            script.MovingStop();
-
-            RunMenuAnimation();
-            ScoreControllerScript scoreController = FindObjectOfType<ScoreControllerScript>();
-            scoreController.FinalMessage();
-            
-            GameObject dead = Instantiate(deadPrefab) as GameObject;
-            dead.transform.position = GameObject.Find("Robot").transform.position;
-            HideRobotParts();
+            KillHero();
         }
     }
 
