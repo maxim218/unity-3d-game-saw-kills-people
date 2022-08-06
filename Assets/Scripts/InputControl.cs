@@ -15,8 +15,11 @@ public class InputControl : MonoBehaviour {
     }
 
     public int GetDirection() {
+        if(_a && _d) return 0;
+
         if (_a) return -1;
         if (_d) return 1;
+
         return 0;
     }
 }
