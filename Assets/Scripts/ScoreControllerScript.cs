@@ -25,9 +25,9 @@ public class ScoreControllerScript : MonoBehaviour {
     }
     
     private void Start() {
-        Type type = typeof(ManControl);
-        if (FindObjectsOfType(type) is ManControl[] arr) 
-            _length = arr.Length;
+        LevelBuilder levelBuilder = LevelBuilder.GetLevelBuilderObject(); 
+        levelBuilder.LoadLevelBlock();
+        _length = levelBuilder.GetEnemiesNumber();
         RenderScore();
     }
 

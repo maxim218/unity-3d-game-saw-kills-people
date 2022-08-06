@@ -8,6 +8,10 @@ public class RobotControl : MonoBehaviour {
     
     [SerializeField] private InputControl inputControlComp = null;
 
+    public void SetRobotPosition(float xHero, float zHero) {
+        transform.position = new Vector3(xHero, 1.54f, zHero);
+    }
+
     private bool _allowUpdate = true;
 
     public void MovingStop() {
