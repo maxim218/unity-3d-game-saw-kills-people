@@ -26,5 +26,21 @@ public class ManControl : MonoBehaviour {
     private static void ChangeScore() {
         ScoreControllerScript script = FindObjectOfType<ScoreControllerScript>();
         script.ChangeScoreAndRender();
+        if (script.IsWin() == true) PlayerWinTheGame();
+    }
+
+    private static void PlayerWinTheGame() {
+        const string playerWinMsg = "Player win the game";
+        Debug.Log(playerWinMsg);
+
+        RobotControl script = FindObjectOfType<RobotControl>();
+        script.MovingStop();
+
+        CapsuleCollider collider = script.gameObject.GetComponent<CapsuleCollider>();
+        Destroy(collider);
+
+        ScoreControllerScript.RunMenuAnimation();
+        ScoreControllerScript scoreController = FindObjectOfType<ScoreControllerScript>();
+        scoreController.FinalMessage(false);
     }
 }

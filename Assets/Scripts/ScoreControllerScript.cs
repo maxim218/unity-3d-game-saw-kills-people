@@ -17,13 +17,28 @@ public class ScoreControllerScript : MonoBehaviour {
         textComponent.text = content;
     }
 
-    public void FinalMessage() {
-        const string one = "Your score";
-        string two = _score + " / " + _length;
-        const string three = "Tap to restart";
-        finalResultTextComponent.text = one + '\n' + two + '\n' + three;
+    public void FinalMessage(bool isHeroLose) {
+        if(isHeroLose) {
+            const string one = "Your score";
+            string two = _score + " / " + _length;
+            const string three = "Tap to restart";
+            finalResultTextComponent.text = one + '\n' + two + '\n' + three;
+        } else {
+            const string lineA = "You are winner";
+            const string lineB = "Nice game";
+            const string lineC = "Tap to continue";
+            finalResultTextComponent.text = lineA + '\n' + lineB + '\n' + lineC;
+        }
     }
-    
+
+    public static void RunMenuAnimation() {
+        GameObject obj = GameObject.Find("MenuFon");
+        Animator anim = obj.GetComponent<Animator>();
+        const string stateName = "MenuFonAnimation";
+        const int wait = 0;
+        anim.CrossFade(stateName, wait);
+    }
+
     private void Start() {
         LevelBuilder levelBuilder = LevelBuilder.GetLevelBuilderObject(); 
         levelBuilder.LoadLevelBlock();
@@ -35,6 +50,10 @@ public class ScoreControllerScript : MonoBehaviour {
         _score++;
         RenderScore();
         RunAnimation();
+    }
+
+    public bool IsWin() {
+        return (_length == _score);
     }
 
     private void RunAnimation() {
