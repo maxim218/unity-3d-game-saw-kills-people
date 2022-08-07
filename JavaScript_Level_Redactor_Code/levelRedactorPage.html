@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Level Redactor</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            font-family: Geneva, Arial, Helvetica, sans-serif;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            font-size: 18px;
+        }
+
+        #box-first {
+            position: absolute;
+            left: 50px;
+            top: 20px;
+            width: 800px;
+            height: 80px;
+            background: darkgray;
+        }
+
+        #can {
+            position: absolute;
+            left: 50px;
+            top: 120px;
+            background: bisque;
+        }
+
+        #box-second {
+            position: absolute;
+            left: 50px;
+            top: 940px;
+            width: 800px;
+            height: 80px;
+            background: darkgray;
+        }
+
+        .button-class {
+            display: inline-block;
+            font-size: 22px;
+            color: white;
+            background: blue;
+            padding: 6px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .button-class:hover {
+            background: darkblue;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div id="box-first">
+    <div style="padding-left: 30px;">
+        <h1>Level Redactor</h1>
+    </div>
+</div>
+
+<canvas width='800px' height='800px' id='can'></canvas>
+
+<div id="box-second">
+    <br>
+    <div style="padding-left: 30px;">
+        <div class="button-class" onclick="setElementType('TYPE_WALLS')">Walls</div>
+        <div class="button-class" onclick="setElementType('TYPE_RED_PERSONS')">Red persons</div>
+        <div class="button-class" onclick="setElementType('TYPE_HERO')">Hero</div>
+        <span style="padding-left: 24px; padding-right: 24px; font-weight: bold;" id="label-type-id">Mode not selected</span>
+        <div class="button-class" onclick="makeResultJson()">Get JSON</div>
+    </div>
+</div>
+
+<script src="./redactorCode.js"></script>
+
+</body>
+</html>
