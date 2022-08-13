@@ -29,6 +29,9 @@ public class ScoreControllerScript : MonoBehaviour {
             const string lineC = "Tap to continue";
             finalResultTextComponent.text = lineA + '\n' + lineB + '\n' + lineC;
         }
+
+        MyJoystickControl script = FindObjectOfType<MyJoystickControl>();
+        if (script) script.JoystickDeactivateOnScreen();
     }
 
     public static void RunMenuAnimation() {
