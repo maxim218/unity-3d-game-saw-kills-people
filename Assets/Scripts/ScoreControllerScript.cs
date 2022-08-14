@@ -32,7 +32,17 @@ public class ScoreControllerScript : MonoBehaviour {
 
         MyJoystickControl script = FindObjectOfType<MyJoystickControl>();
         if (script) script.JoystickDeactivateOnScreen();
+
+        StartCoroutine(ShowHugeBoxAsync());
     }
+
+    private IEnumerator ShowHugeBoxAsync() {
+        const float waitVal = 1.1f;
+        yield return new WaitForSeconds(waitVal);
+        if (hugeImageObj) hugeImageObj.SetActive(true);
+    }
+
+    [SerializeField] private GameObject hugeImageObj = null;
 
     public static void RunMenuAnimation() {
         GameObject obj = GameObject.Find("MenuFon");
