@@ -27,7 +27,8 @@ public class ScoreControllerScript : MonoBehaviour {
             const string lineA = "You are winner";
             const string lineB = "Nice game";
             const string lineC = "Tap to continue";
-            finalResultTextComponent.text = lineA + '\n' + lineB + '\n' + lineC;
+            finalResultTextComponent.text = lineA + '\n' + lineB + '\n' + lineC; 
+            LevelIndexManager.MakeNextLevelIndex();
         }
 
         MyJoystickControl script = FindObjectOfType<MyJoystickControl>();

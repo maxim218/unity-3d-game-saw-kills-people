@@ -5610,7 +5610,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f511033f693dc624cbf07b0dc4bc76a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelNumber: 1
+  levelNumber: 0
   PrefabWall: {fileID: 5552546191509654771, guid: 5a4eaecbec6500045b5b0abce69d066e, type: 3}
   PrefabRedPerson: {fileID: 6535090661329803145, guid: c7e213a9aa3995944891978ebb285880, type: 3}
 --- !u!114 &705507997

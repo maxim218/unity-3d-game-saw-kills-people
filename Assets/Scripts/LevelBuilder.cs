@@ -22,8 +22,6 @@ public class LevelBuilder : MonoBehaviour {
     private const string WallType = "WALL_TYPE_ELEMENT";
     private const string RedPersonType = "RED_PERSON_TYPE_ELEMENT";
 
-    [SerializeField] private int levelNumber = 0;
-
     [SerializeField] private GameObject PrefabWall = null;
     [SerializeField] private GameObject PrefabRedPerson = null;
 
@@ -32,11 +30,28 @@ public class LevelBuilder : MonoBehaviour {
         return obj;
     }
 
-    public void LoadLevelBlock() {
+    private static string GetStringFromAsset() {
         // get string from asset
+        int levelNumber = LevelIndexManager.GetLevelIndex();
         string nameFile = "LEVEL_" + levelNumber;
         TextAsset asset = Resources.Load<TextAsset>(nameFile);
         string jsonString = asset.text;
+        return jsonString;
+    }
+    
+    public void LoadLevelBlock() {
+        // json
+        string jsonString = string.Empty;
+
+        try {
+            jsonString = GetStringFromAsset();
+        } catch {
+            LevelIndexManager.ResetIndexToZero();
+            jsonString = GetStringFromAsset();
+        }
+
+        string infoAboutLevelMsg = "-------- " + "Level index: " + LevelIndexManager.GetLevelIndex() + " --------";
+        Debug.Log(infoAboutLevelMsg);
 
         // make obj from json
         ContentLevel contentLevel = JsonUtility.FromJson<ContentLevel>(jsonString);
