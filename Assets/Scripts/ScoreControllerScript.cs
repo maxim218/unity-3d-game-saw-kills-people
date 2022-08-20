@@ -17,6 +17,26 @@ public class ScoreControllerScript : MonoBehaviour {
         textComponent.text = content;
     }
 
+    [SerializeField] private FabricSounds fabricSoundsScript = null;
+
+    public void PlayKillMonstSound() {
+        if (fabricSoundsScript) {
+            const string soundType = FabricSounds.SOUND_MONSTR_KILL_PREFAB_CONST;
+            fabricSoundsScript.CreateSound(soundType);
+        }
+    }
+    private void PlaySound(bool isHeroLose) {
+        if (fabricSoundsScript) {
+            const string a = FabricSounds.SOUND_HIT_WALL_PREFAB_CONST;
+            const string b = FabricSounds.SOUND_PLAYER_WIN_GAME_PREFAB_CONST;
+            string soundType = isHeroLose ? a : b;
+            fabricSoundsScript.CreateSound(soundType);
+        } else {
+            const string warnMsg = "Warning - fabricSoundsScript is null";
+            Debug.LogWarning(warnMsg);
+        }
+    }
+
     public void FinalMessage(bool isHeroLose) {
         if(isHeroLose) {
             const string one = "Your score";
@@ -35,6 +55,8 @@ public class ScoreControllerScript : MonoBehaviour {
         if (script) script.JoystickDeactivateOnScreen();
 
         StartCoroutine(ShowHugeBoxAsync());
+
+        PlaySound(isHeroLose);
     }
 
     private IEnumerator ShowHugeBoxAsync() {

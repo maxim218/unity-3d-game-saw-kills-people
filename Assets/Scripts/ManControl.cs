@@ -9,6 +9,7 @@ public class ManControl : MonoBehaviour {
         if (GameObject.Find("Robot") == other.gameObject) {
             GameObject dead = Instantiate(deadPrefab) as GameObject;
             dead.transform.position = transform.position;
+            PlaySoundKillMonstr();
             ChangeScore();
             RunSkullAnimation();
             Destroy(gameObject);
@@ -42,5 +43,15 @@ public class ManControl : MonoBehaviour {
         ScoreControllerScript.RunMenuAnimation();
         ScoreControllerScript scoreController = FindObjectOfType<ScoreControllerScript>();
         scoreController.FinalMessage(false);
+    }
+
+    private static void PlaySoundKillMonstr() {
+        try {
+            ScoreControllerScript scoreController = FindObjectOfType<ScoreControllerScript>();
+            if (scoreController) scoreController.PlayKillMonstSound();
+        } catch {
+            const string warnMessage = "Warn - problem with running sound";
+            Debug.LogWarning(warnMessage);
+        }
     }
 }
