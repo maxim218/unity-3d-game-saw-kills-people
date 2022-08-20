@@ -5613,6 +5613,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PrefabWall: {fileID: 5552546191509654771, guid: 5a4eaecbec6500045b5b0abce69d066e, type: 3}
   PrefabRedPerson: {fileID: 6535090661329803145, guid: c7e213a9aa3995944891978ebb285880, type: 3}
+  PrefabHakiWakiMonstr: {fileID: 2162429321143657067, guid: 45ddec69f24d81b4b81b50c913a914a9, type: 3}
 --- !u!114 &705507997
 MonoBehaviour:
   m_ObjectHideFlags: 0

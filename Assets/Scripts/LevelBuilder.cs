@@ -24,6 +24,7 @@ public class LevelBuilder : MonoBehaviour {
 
     [SerializeField] private GameObject PrefabWall = null;
     [SerializeField] private GameObject PrefabRedPerson = null;
+    [SerializeField] private GameObject PrefabHakiWakiMonstr = null;
 
     public static LevelBuilder GetLevelBuilderObject() {
         LevelBuilder obj = FindObjectOfType<LevelBuilder>();
@@ -72,7 +73,7 @@ public class LevelBuilder : MonoBehaviour {
         for (int i = 0; i < contentLevel.arr.Length; i++) {
             ElementInLevel element = contentLevel.arr[i];
             if(element.type.Trim() == RedPersonType) {
-                CreateRedPerson(element.x, element.z);
+                CreateRedPerson(element.x, element.z, i);
             }
         }
 
@@ -96,8 +97,9 @@ public class LevelBuilder : MonoBehaviour {
         wall.transform.SetParent(wallsGroupObj.transform);
     }
 
-    private void CreateRedPerson(float x, float z) {
-        GameObject redPerson = Instantiate(PrefabRedPerson) as GameObject;
+    private void CreateRedPerson(float x, float z, int index) {
+        bool condition = (index % 2 == 0);
+        GameObject redPerson = Instantiate(condition ? PrefabRedPerson : PrefabHakiWakiMonstr) as GameObject;
         redPerson.transform.position = new Vector3(x, 2f, z);
         // parent set
         GameObject peopleGroupObj = GameObject.Find("PeopleGroup");
