@@ -25,9 +25,12 @@ public class WallControl : MonoBehaviour {
     }
 
     private static void HideRobotParts() {
-        GameObject.Find("Robot_A_part").SetActive(false);
-        GameObject.Find("Robot_B_part").SetActive(false);
-        GameObject.Find("Robot_C_part").SetActive(false);
+        // hide fire from back
         GameObject.Find("Robot_D_part").SetActive(false);
+        // set saw rotation
+        GameObject.Find("Robot_B_part").transform.localRotation = Quaternion.Euler(-70, 70, 70);
+        // stop rotating saw
+        RotateControl rotateControlScript = GameObject.Find("Robot_B_part").GetComponent<RotateControl>();
+        Destroy(rotateControlScript);
     }
 }
