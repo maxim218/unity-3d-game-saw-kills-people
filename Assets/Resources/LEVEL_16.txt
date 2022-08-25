@@ -1,0 +1,136 @@
+{
+    "arr": [
+        {
+            "type": "WALL_TYPE_ELEMENT",
+            "x": 12,
+            "z": -16
+        },
+        {
+            "type": "WALL_TYPE_ELEMENT",
+            "x": 9,
+            "z": -11
+        },
+        {
+            "type": "WALL_TYPE_ELEMENT",
+            "x": 16,
+            "z": -4
+        },
+        {
+            "type": "WALL_TYPE_ELEMENT",
+            "x": 10,
+            "z": 3
+        },
+        {
+            "type": "WALL_TYPE_ELEMENT",
+            "x": 3,
+            "z": 0
+        },
+        {
+            "type": "WALL_TYPE_ELEMENT",
+            "x": 3,
+            "z": -7
+        },
+        {
+            "type": "WALL_TYPE_ELEMENT",
+            "x": -10,
+            "z": 0
+        },
+        {
+            "type": "WALL_TYPE_ELEMENT",
+            "x": -4,
+            "z": -5
+        },
+        {
+            "type": "WALL_TYPE_ELEMENT",
+            "x": -5,
+            "z": -10
+        },
+        {
+            "type": "WALL_TYPE_ELEMENT",
+            "x": -16,
+            "z": -9
+        },
+        {
+            "type": "WALL_TYPE_ELEMENT",
+            "x": -20,
+            "z": -2
+        },
+        {
+            "type": "WALL_TYPE_ELEMENT",
+            "x": -12,
+            "z": 6
+        },
+        {
+            "type": "WALL_TYPE_ELEMENT",
+            "x": -15,
+            "z": 13
+        },
+        {
+            "type": "WALL_TYPE_ELEMENT",
+            "x": -3,
+            "z": 3
+        },
+        {
+            "type": "WALL_TYPE_ELEMENT",
+            "x": 2,
+            "z": 11
+        },
+        {
+            "type": "WALL_TYPE_ELEMENT",
+            "x": -4,
+            "z": 16
+        },
+        {
+            "type": "WALL_TYPE_ELEMENT",
+            "x": 7,
+            "z": 18
+        },
+        {
+            "type": "WALL_TYPE_ELEMENT",
+            "x": 16,
+            "z": 8
+        },
+        {
+            "type": "RED_PERSON_TYPE_ELEMENT",
+            "x": -10,
+            "z": -5
+        },
+        {
+            "type": "RED_PERSON_TYPE_ELEMENT",
+            "x": 8,
+            "z": -2
+        },
+        {
+            "type": "RED_PERSON_TYPE_ELEMENT",
+            "x": 11,
+            "z": 12
+        },
+        {
+            "type": "RED_PERSON_TYPE_ELEMENT",
+            "x": -10,
+            "z": 16
+        },
+        {
+            "type": "RED_PERSON_TYPE_ELEMENT",
+            "x": -3,
+            "z": 9
+        },
+        {
+            "type": "RED_PERSON_TYPE_ELEMENT",
+            "x": -19,
+            "z": 3
+        },
+        {
+            "type": "RED_PERSON_TYPE_ELEMENT",
+            "x": 15,
+            "z": -11
+        },
+        {
+            "type": "RED_PERSON_TYPE_ELEMENT",
+            "x": -13,
+            "z": -15
+        }
+    ],
+    "xHero": 0,
+    "zHero": -20
+}
