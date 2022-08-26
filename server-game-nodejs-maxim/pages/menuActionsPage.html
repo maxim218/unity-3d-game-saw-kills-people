@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Menu Actions Page</title>
+    <style>
+        body {
+            background: wheat;
+            padding: 20px;
+        }
+
+        .class-btn-elem {
+            color: white;
+            font-weight: bold;
+            display: inline-block;
+            border: 1px solid whitesmoke;
+            padding: 8px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div align="center">
+    <h1>Menu Actions Page</h1>
+    <div class="class-btn-elem" style="background: green;" onclick="watchListOfUsers()">Watch List Of Users</div>
+    <br>
+    <br>
+    <div class="class-btn-elem" style="background: red;" onclick="deleteAllFiles()">Delete All Files</div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+
+<script>
+    "use strict";
+
+    function ajaxGet(urlString, callback) {
+        let r = new XMLHttpRequest();
+        r.open("GET", urlString, true);
+        r.setRequestHeader("Content-Type", "text/plain;charset=UTF-8");
+        r.send(null);
+        r.onload = function() {
+            callback(r.response);
+        };
+    }
+
+    function watchListOfUsers() {
+        setTimeout(() => {
+            const urlString = "/page?page=users&random=" + Math.random() + "." + Math.random() + "." + Math.random();
+            window.location = urlString.trim();
+        }, 5);
+    }
+
+    function deleteAllFiles() {
+        const urlString = "/game/api/delete/all/files?random=" + Math.random() + "." + Math.random() + "." + Math.random();
+        ajaxGet(urlString.trim(), (answerString) => {
+            console.log(answerString);
+            alert("Records are deleted");
+        });
+    }
+</script>
+
+</body>
+</html>

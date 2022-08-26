@@ -1,0 +1,16 @@
+{
+  "name": "server-game-nodejs",
+  "version": "1.2.3",
+  "description": "Server Game NodeJs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "Kolotovkin Maxim",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "fs": "^0.0.1-security"
+  }
+}

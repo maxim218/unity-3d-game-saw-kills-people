@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Users List Page</title>
+    <style>
+        body {
+            background: wheat;
+            padding: 20px;
+        }
+
+        #users-list-box-id {
+            padding: 12px;
+            border: 2px solid black;
+        }
+
+        .class-list-element {
+            background: blue;
+            color: white;
+            padding: 5px;
+            margin-bottom: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Users List Page</h1>
+<div id="users-list-box-id"></div>
+<br>
+<br>
+<br>
+<br>
+
+<script>
+    "use strict";
+
+    function ajaxGet(urlString, callback) {
+        let r = new XMLHttpRequest();
+        r.open("GET", urlString, true);
+        r.setRequestHeader("Content-Type", "text/plain;charset=UTF-8");
+        r.send(null);
+        r.onload = function() {
+            callback(r.response);
+        };
+    }
+
+    function openInfoPage(thisElement) {
+        const stringName = thisElement.innerHTML.trim();
+        const urlString = "/game/api/one/file/get?userIdParam=" + stringName.trim() + "&random=" + Math.random() + "." + Math.random() + "." + Math.random();
+        window.open(urlString);
+    }
+
+    function getNameBoxComponent(stringNameParam) {
+        const stringName = stringNameParam.split(".txt").join("").trim();
+        return `<div class="class-list-element" onclick="openInfoPage(this)">${stringName}</div>`;
+    }
+
+    function renderListOfElements(boxLink, namesArr) {
+        let stringContent = "";
+        namesArr.forEach(currentName => {
+            stringContent += getNameBoxComponent(currentName);
+        });
+        boxLink.innerHTML = stringContent.trim();
+    }
+
+    window.onload = function () {
+        const urlString = "/game/api/names/get/all?random=" + Math.random() + "." + Math.random() + "." + Math.random();
+        ajaxGet(urlString.trim(), (answerString) => {
+            const ansObject = JSON.parse(answerString);
+            const namesArr = ansObject.namesArr;
+            console.log(namesArr);
+            const boxLink = document.getElementById("users-list-box-id");
+            renderListOfElements(boxLink, namesArr);
+        });
+    };
+</script>
+
+</body>
+</html>
