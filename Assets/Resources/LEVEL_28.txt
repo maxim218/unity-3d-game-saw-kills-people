@@ -1,0 +1,96 @@
+{
+    "arr": [
+        {
+            "type": "WALL_TYPE_ELEMENT",
+            "x": -11,
+            "z": -3
+        },
+        {
+            "type": "WALL_TYPE_ELEMENT",
+            "x": -5,
+            "z": 0
+        },
+        {
+            "type": "WALL_TYPE_ELEMENT",
+            "x": -15,
+            "z": 8
+        },
+        {
+            "type": "WALL_TYPE_ELEMENT",
+            "x": -8,
+            "z": 13
+        },
+        {
+            "type": "WALL_TYPE_ELEMENT",
+            "x": 8,
+            "z": 0
+        },
+        {
+            "type": "WALL_TYPE_ELEMENT",
+            "x": 14,
+            "z": -4
+        },
+        {
+            "type": "WALL_TYPE_ELEMENT",
+            "x": 14,
+            "z": 6
+        },
+        {
+            "type": "WALL_TYPE_ELEMENT",
+            "x": 8,
+            "z": 14
+        },
+        {
+            "type": "WALL_TYPE_ELEMENT",
+            "x": -10,
+            "z": 4
+        },
+        {
+            "type": "WALL_TYPE_ELEMENT",
+            "x": 8,
+            "z": -12
+        },
+        {
+            "type": "RED_PERSON_TYPE_ELEMENT",
+            "x": -5,
+            "z": -7
+        },
+        {
+            "type": "RED_PERSON_TYPE_ELEMENT",
+            "x": -15,
+            "z": 0
+        },
+        {
+            "type": "RED_PERSON_TYPE_ELEMENT",
+            "x": -5,
+            "z": 7
+        },
+        {
+            "type": "RED_PERSON_TYPE_ELEMENT",
+            "x": -14,
+            "z": 15
+        },
+        {
+            "type": "RED_PERSON_TYPE_ELEMENT",
+            "x": 8,
+            "z": -6
+        },
+        {
+            "type": "RED_PERSON_TYPE_ELEMENT",
+            "x": 18,
+            "z": 0
+        },
+        {
+            "type": "RED_PERSON_TYPE_ELEMENT",
+            "x": 8,
+            "z": 7
+        },
+        {
+            "type": "RED_PERSON_TYPE_ELEMENT",
+            "x": 7,
+            "z": 19
+        }
+    ],
+    "xHero": 0,
+    "zHero": -20
+}
