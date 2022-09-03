@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
-
+using UnityEngine.UI;
 
 [Serializable] 
 internal class ElementInLevel {
@@ -39,7 +39,15 @@ public class LevelBuilder : MonoBehaviour {
         string jsonString = asset.text;
         return jsonString;
     }
-    
+
+    [SerializeField] private Text _labelLevelText = null;
+
+    private void SetLabelLevelText(int lv) {
+        if (_labelLevelText) {
+            _labelLevelText.text = "Lv " + lv;
+        }
+    }
+
     public void LoadLevelBlock() {
         // json
         string jsonString = string.Empty;
@@ -53,6 +61,7 @@ public class LevelBuilder : MonoBehaviour {
 
         string infoAboutLevelMsg = "-------- " + "Level index: " + LevelIndexManager.GetLevelIndex() + " --------";
         Debug.Log(infoAboutLevelMsg);
+        SetLabelLevelText( 1 + LevelIndexManager.GetLevelIndex() );
 
         // make obj from json
         ContentLevel contentLevel = JsonUtility.FromJson<ContentLevel>(jsonString);
