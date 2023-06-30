@@ -8,10 +8,12 @@ public class SceneLoader : MonoBehaviour {
 
     [SerializeField] private GameObject activateMe = null;
     [SerializeField] private GameObject deactivateMe = null;
+    [SerializeField] private GameObject killingSawLabel = null;
 
     private void ControlActDeact() {
         if (deactivateMe) deactivateMe.SetActive(false);
         if (activateMe) activateMe.SetActive(true);
+        if (killingSawLabel) killingSawLabel.SetActive(false);
     }
 
     private IEnumerator LoadSceneAsync() {
