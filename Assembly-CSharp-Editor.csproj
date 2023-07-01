@@ -62,6 +62,32 @@
     <Compile Include="Assets\Joystick Pack\Scripts\Editor\DynamicJoystickEditor.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\ExternalDependencyManager\Editor\Google.VersionHandler.dll" />
+    <None Include="Assets\Appodeal\Editor\Dependencies\AppsFlyerDependencies.xml" />
+    <None Include="Assets\Appodeal\Editor\Dependencies\AppodealDependencies.xml" />
+    <None Include="Assets\Appodeal\Editor\Dependencies\AdjustDependencies.xml" />
+    <None Include="Assets\Appodeal\Editor\Dependencies\UnityDependencies.xml" />
+    <None Include="Assets\Appodeal\Editor\Dependencies\YandexDependencies.xml" />
+    <None Include="Assets\Appodeal\Editor\Dependencies\AdColonyDependencies.xml" />
+    <None Include="Assets\Appodeal\Editor\Dependencies\IronSourceDependencies.xml" />
+    <None Include="Assets\ExternalDependencyManager\Editor\1.2.174\Google.IOSResolver.dll" />
+    <None Include="Assets\ExternalDependencyManager\Editor\1.2.174\Google.VersionHandlerImpl.dll" />
+    <None Include="Assets\Appodeal\Editor\Dependencies\VungleDependencies.xml" />
+    <None Include="Assets\Appodeal\Editor\Dependencies\AppLovinDependencies.xml" />
+    <None Include="Assets\Appodeal\Editor\Dependencies\GoogleAdMobDependencies.xml" />
+    <None Include="Assets\Appodeal\Editor\Dependencies\SentryAnalyticsDependencies.xml" />
+    <None Include="Assets\Appodeal\Editor\Dependencies\MetaAudienceNetworkDependencies.xml" />
+    <None Include="Assets\Appodeal\Editor\Dependencies\MyTargetDependencies.xml" />
+    <None Include="Assets\Appodeal\Editor\Dependencies\StackAnalyticsDependencies.xml" />
+    <None Include="Assets\Appodeal\Editor\Dependencies\FirebaseDependencies.xml" />
+    <None Include="Assets\ExternalDependencyManager\Editor\1.2.174\Google.PackageManagerResolver.dll" />
+    <None Include="Assets\ExternalDependencyManager\Editor\external-dependency-manager_version-1.2.174_manifest.txt" />
+    <None Include="Assets\ExternalDependencyManager\Editor\1.2.174\Google.JarResolver.dll" />
+    <None Include="Assets\Appodeal\Editor\Dependencies\BidMachineDependencies.xml" />
+    <None Include="Assets\Appodeal\Editor\Dependencies\MetaDependencies.xml" />
+    <None Include="Assets\Appodeal\Editor\Dependencies\IABDependencies.xml" />
+  </ItemGroup>
+  <ItemGroup>
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.35f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
@@ -310,6 +336,21 @@
     </Reference>
     <Reference Include="unityplastic">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@1.15.17\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.VersionHandler">
+      <HintPath>Assets\ExternalDependencyManager\Editor\Google.VersionHandler.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.PackageManagerResolver">
+      <HintPath>Assets\ExternalDependencyManager\Editor\1.2.174\Google.PackageManagerResolver.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.VersionHandlerImpl">
+      <HintPath>Assets\ExternalDependencyManager\Editor\1.2.174\Google.VersionHandlerImpl.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.JarResolver">
+      <HintPath>Assets\ExternalDependencyManager\Editor\1.2.174\Google.JarResolver.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.IOSResolver">
+      <HintPath>Assets\ExternalDependencyManager\Editor\1.2.174\Google.IOSResolver.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
@@ -709,6 +750,63 @@
     </Reference>
     <Reference Include="Unity.Recorder">
       <HintPath>Library\ScriptAssemblies\Unity.Recorder.dll</HintPath>
+    </Reference>
+    <Reference Include="AppodealStack.UnityEditor.SDKManager">
+      <HintPath>Library\ScriptAssemblies\AppodealStack.UnityEditor.SDKManager.dll</HintPath>
+    </Reference>
+    <Reference Include="AppodealStack.UnityEditor.AssetExtractors">
+      <HintPath>Library\ScriptAssemblies\AppodealStack.UnityEditor.AssetExtractors.dll</HintPath>
+    </Reference>
+    <Reference Include="AppodealStack.ConsentManagement.Api">
+      <HintPath>Library\ScriptAssemblies\AppodealStack.ConsentManagement.Api.dll</HintPath>
+    </Reference>
+    <Reference Include="AppodealStack.ConsentManagement.Platforms">
+      <HintPath>Library\ScriptAssemblies\AppodealStack.ConsentManagement.Platforms.dll</HintPath>
+    </Reference>
+    <Reference Include="AppodealStack.UnityEditor.PostProcess">
+      <HintPath>Library\ScriptAssemblies\AppodealStack.UnityEditor.PostProcess.dll</HintPath>
+    </Reference>
+    <Reference Include="AppodealStack.UnityEditor.SDKManager.Models">
+      <HintPath>Library\ScriptAssemblies\AppodealStack.UnityEditor.SDKManager.Models.dll</HintPath>
+    </Reference>
+    <Reference Include="AppodealStack.UnityEditor.InternalResources">
+      <HintPath>Library\ScriptAssemblies\AppodealStack.UnityEditor.InternalResources.dll</HintPath>
+    </Reference>
+    <Reference Include="AppodealStack.ConsentManagement.Common">
+      <HintPath>Library\ScriptAssemblies\AppodealStack.ConsentManagement.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="AppodealStack.UnityEditor.PluginRemover">
+      <HintPath>Library\ScriptAssemblies\AppodealStack.UnityEditor.PluginRemover.dll</HintPath>
+    </Reference>
+    <Reference Include="AppodealStack.UnityEditor.TopBarMenu">
+      <HintPath>Library\ScriptAssemblies\AppodealStack.UnityEditor.TopBarMenu.dll</HintPath>
+    </Reference>
+    <Reference Include="AppodealStack.Monetization.Common">
+      <HintPath>Library\ScriptAssemblies\AppodealStack.Monetization.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="AppodealStack.Monetization.Platforms">
+      <HintPath>Library\ScriptAssemblies\AppodealStack.Monetization.Platforms.dll</HintPath>
+    </Reference>
+    <Reference Include="AppodealStack.UnityEditor.Utils">
+      <HintPath>Library\ScriptAssemblies\AppodealStack.UnityEditor.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="AppodealStack.Monetization.Api">
+      <HintPath>Library\ScriptAssemblies\AppodealStack.Monetization.Api.dll</HintPath>
+    </Reference>
+    <Reference Include="AppodealStack.UnityEditor.PreProcess">
+      <HintPath>Library\ScriptAssemblies\AppodealStack.UnityEditor.PreProcess.dll</HintPath>
+    </Reference>
+    <Reference Include="marijnz.EditorCoroutines">
+      <HintPath>Library\ScriptAssemblies\marijnz.EditorCoroutines.dll</HintPath>
+    </Reference>
+    <Reference Include="AppodealStack.UnityEditor.SettingsWindow">
+      <HintPath>Library\ScriptAssemblies\AppodealStack.UnityEditor.SettingsWindow.dll</HintPath>
+    </Reference>
+    <Reference Include="AppodealStack.ConsentManagement.Platforms.Dummy">
+      <HintPath>Library\ScriptAssemblies\AppodealStack.ConsentManagement.Platforms.Dummy.dll</HintPath>
+    </Reference>
+    <Reference Include="AppodealStack.Monetization.Platforms.Dummy">
+      <HintPath>Library\ScriptAssemblies\AppodealStack.Monetization.Platforms.Dummy.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
