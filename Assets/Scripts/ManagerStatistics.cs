@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class ManagerStatistics : MonoBehaviour {
     private static string GetDomainAndPort() {
-        return "http://2.59.156.129:5015";
+        return "http://78.40.216.174:5015";
     }
 
     [ContextMenu("Clear Local Storage Method")]
