@@ -59,6 +59,9 @@ public class LevelBuilder : MonoBehaviour {
             jsonString = GetStringFromAsset();
         }
 
+        int numStatistics = LevelIndexManager.GetLevelIndex();
+        AppodealController.AppodealEvent_level_start(numStatistics);
+
         string infoAboutLevelMsg = "-------- " + "Level index: " + LevelIndexManager.GetLevelIndex() + " --------";
         Debug.Log(infoAboutLevelMsg);
         SetLabelLevelText( 1 + LevelIndexManager.GetLevelIndex() );

@@ -38,7 +38,11 @@ public class ScoreControllerScript : MonoBehaviour {
     }
 
     public void FinalMessage(bool isHeroLose) {
-        if(isHeroLose) {
+        int numStatistics = LevelIndexManager.GetLevelIndex();
+        int resultStatistics = isHeroLose ? 0 : 1;
+        AppodealController.AppodealEvent_level_finished(numStatistics, resultStatistics);
+
+        if (isHeroLose) {
             const string one = "Your score";
             string two = _score + " / " + _length;
             const string three = "Tap to restart";

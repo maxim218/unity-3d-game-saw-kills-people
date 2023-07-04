@@ -32,6 +32,7 @@ public class AppodealController : MonoBehaviour {
         try {
             Appodeal.Cache(AppodealAdType.Interstitial);
             Appodeal.Cache(AppodealAdType.RewardedVideo);
+            AppodealEvent_app_start();
         } catch {
             const string errorMsg = "Error in - Running Appodeal Cache Methods";
             Debug.Log(errorMsg);
@@ -42,6 +43,7 @@ public class AppodealController : MonoBehaviour {
         try {
             AdsSceneController script = FindObjectOfType<AdsSceneController>();
             if (script) script.SuccessWatchVideoFully();
+            AppodealEvent_rewarded();
         } catch {
             Debug.Log("Error in - On Rewarded Video Finished");
         }
@@ -75,5 +77,42 @@ public class AppodealController : MonoBehaviour {
     public static void PublicRunRewarderVideo() {
         AppodealController controller = FindObjectOfType<AppodealController>();
         if (controller) controller.ShowRewarderVideo();
+    }
+
+    public static void AppodealEvent_app_start() {
+        try {
+            Appodeal.LogEvent("app_start");
+        } catch {
+            Debug.Log("APPODEAL EVENT ERROR");
+        }
+    }
+
+    public static void AppodealEvent_rewarded() {
+        try {
+            Appodeal.LogEvent("rewarded");
+        } catch {
+            Debug.Log("APPODEAL EVENT ERROR");
+        }
+    }
+
+    public static void AppodealEvent_level_start(int num) {
+        try {
+            Appodeal.LogEvent("level_start", new Dictionary<string, object> {
+                { "num", num }
+            });
+        } catch {
+            Debug.Log("APPODEAL EVENT ERROR");
+        }
+    }
+
+    public static void AppodealEvent_level_finished(int num, int result) {
+        try {
+            Appodeal.LogEvent("level_finished", new Dictionary<string, object> {
+                { "num", num },
+                { "result", result }
+            });
+        } catch {
+            Debug.Log("APPODEAL EVENT ERROR");
+        }
     }
 }
