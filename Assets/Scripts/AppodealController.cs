@@ -11,14 +11,9 @@ public class AppodealController : MonoBehaviour {
         DontDestroyOnLoad(gameObject);
     }
 
-    private void SetTestMode() {
-        Appodeal.SetTesting(true);
-    }
-
     void Start() {
         try {
-            SetTestMode();
-            int adTypes = AppodealAdType.Interstitial | AppodealAdType.Banner | AppodealAdType.RewardedVideo | AppodealAdType.Mrec;
+            int adTypes = AppodealAdType.Interstitial | AppodealAdType.RewardedVideo;
             AppodealCallbacks.Sdk.OnInitialized += OnInitializationFinished;
             AppodealCallbacks.RewardedVideo.OnFinished += OnRewardedVideoFinished;
             Appodeal.Initialize(appKey, adTypes);
