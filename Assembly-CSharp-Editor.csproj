@@ -75,7 +75,6 @@
     <None Include="Assets\ExternalDependencyManager\Editor\1.2.174\Google.VersionHandlerImpl.dll" />
     <None Include="Assets\Appodeal\Editor\Dependencies\VungleDependencies.xml" />
     <None Include="Assets\Appodeal\Editor\Dependencies\AppLovinDependencies.xml" />
-    <None Include="Assets\Appodeal\Editor\Dependencies\GoogleAdMobDependencies.xml" />
     <None Include="Assets\Appodeal\Editor\Dependencies\SentryAnalyticsDependencies.xml" />
     <None Include="Assets\Appodeal\Editor\Dependencies\MetaAudienceNetworkDependencies.xml" />
     <None Include="Assets\Appodeal\Editor\Dependencies\MyTargetDependencies.xml" />

@@ -48,6 +48,18 @@ public class LevelBuilder : MonoBehaviour {
         }
     }
 
+    [SerializeField] private Material [] _materialsArray = null;
+
+    private void SetSkyBoxMaterial(int levelIndex) {
+        try {
+            int a = levelIndex / 3;
+            int b = a % _materialsArray.Length;
+            if (b < _materialsArray.Length) RenderSettings.skybox = _materialsArray[b];
+        } catch {
+            // empty
+        }
+    }
+
     public void LoadLevelBlock() {
         // json
         string jsonString = string.Empty;
@@ -61,6 +73,12 @@ public class LevelBuilder : MonoBehaviour {
 
         int numStatistics = LevelIndexManager.GetLevelIndex();
         AppodealController.AppodealEvent_level_start(numStatistics);
+
+        try {
+            SetSkyBoxMaterial(numStatistics);
+        } catch {
+            // empty
+        }
 
         string infoAboutLevelMsg = "-------- " + "Level index: " + LevelIndexManager.GetLevelIndex() + " --------";
         Debug.Log(infoAboutLevelMsg);

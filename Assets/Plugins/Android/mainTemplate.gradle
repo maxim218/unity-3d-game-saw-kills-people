@@ -8,7 +8,7 @@
             url "https://maven.google.com"
         }
         maven {
-            url "https://artifactory.appodeal.com/appodeal" // Assets/Appodeal/Editor/Dependencies/AdColonyDependencies.xml:18, Assets/Appodeal/Editor/Dependencies/AdjustDependencies.xml:23, Assets/Appodeal/Editor/Dependencies/AppLovinDependencies.xml:16, Assets/Appodeal/Editor/Dependencies/AppodealDependencies.xml:23, Assets/Appodeal/Editor/Dependencies/AppsFlyerDependencies.xml:18, Assets/Appodeal/Editor/Dependencies/BidMachineDependencies.xml:24, Assets/Appodeal/Editor/Dependencies/FirebaseDependencies.xml:17, Assets/Appodeal/Editor/Dependencies/IronSourceDependencies.xml:17, Assets/Appodeal/Editor/Dependencies/MetaDependencies.xml:16, Assets/Appodeal/Editor/Dependencies/MyTargetDependencies.xml:19, Assets/Appodeal/Editor/Dependencies/SentryAnalyticsDependencies.xml:14, Assets/Appodeal/Editor/Dependencies/StackAnalyticsDependencies.xml:16, Assets/Appodeal/Editor/Dependencies/UnityDependencies.xml:15, Assets/Appodeal/Editor/Dependencies/VungleDependencies.xml:20, Assets/Appodeal/Editor/Dependencies/YandexDependencies.xml:16
+            url "https://artifactory.appodeal.com/appodeal" // Assets/Appodeal/Editor/Dependencies/AdColonyDependencies.xml:18, Assets/Appodeal/Editor/Dependencies/AdjustDependencies.xml:23, Assets/Appodeal/Editor/Dependencies/AppLovinDependencies.xml:16, Assets/Appodeal/Editor/Dependencies/AppodealDependencies.xml:23, Assets/Appodeal/Editor/Dependencies/AppsFlyerDependencies.xml:18, Assets/Appodeal/Editor/Dependencies/BidMachineDependencies.xml:23, Assets/Appodeal/Editor/Dependencies/FirebaseDependencies.xml:17, Assets/Appodeal/Editor/Dependencies/IronSourceDependencies.xml:17, Assets/Appodeal/Editor/Dependencies/MetaDependencies.xml:16, Assets/Appodeal/Editor/Dependencies/MyTargetDependencies.xml:19, Assets/Appodeal/Editor/Dependencies/SentryAnalyticsDependencies.xml:14, Assets/Appodeal/Editor/Dependencies/StackAnalyticsDependencies.xml:16, Assets/Appodeal/Editor/Dependencies/UnityDependencies.xml:15, Assets/Appodeal/Editor/Dependencies/VungleDependencies.xml:20, Assets/Appodeal/Editor/Dependencies/YandexDependencies.xml:16
         }
         mavenLocal()
         mavenCentral()
@@ -31,7 +31,7 @@ dependencies {
     implementation 'com.appodeal.ads.sdk.networks:adcolony:3.0.2.0' // Assets/Appodeal/Editor/Dependencies/AdColonyDependencies.xml:8
     implementation 'com.appodeal.ads.sdk.networks:applovin:3.0.2.0' // Assets/Appodeal/Editor/Dependencies/AppLovinDependencies.xml:7
     implementation 'com.appodeal.ads.sdk.networks:appodeal:3.0.2.0' // Assets/Appodeal/Editor/Dependencies/AppodealDependencies.xml:13
-    implementation 'com.appodeal.ads.sdk.networks:bidmachine:3.0.2.0' // Assets/Appodeal/Editor/Dependencies/BidMachineDependencies.xml:13
+    implementation 'com.appodeal.ads.sdk.networks:bidmachine:3.0.2.0' // Assets/Appodeal/Editor/Dependencies/BidMachineDependencies.xml:12
     implementation 'com.appodeal.ads.sdk.networks:ironsource:3.0.2.0' // Assets/Appodeal/Editor/Dependencies/IronSourceDependencies.xml:7
     implementation 'com.appodeal.ads.sdk.networks:mraid:3.0.2.0' // Assets/Appodeal/Editor/Dependencies/AppodealDependencies.xml:12
     implementation 'com.appodeal.ads.sdk.networks:my_target:3.0.2.0' // Assets/Appodeal/Editor/Dependencies/MyTargetDependencies.xml:8
@@ -68,12 +68,12 @@ dependencies {
     implementation 'com.yandex.android:mobileads:5.5.0' // Assets/Appodeal/Editor/Dependencies/YandexDependencies.xml:9
     implementation 'com.yandex.android:mobmetricalib:5.2.0' // Assets/Appodeal/Editor/Dependencies/YandexDependencies.xml:10
     implementation 'io.bidmachine:ads.networks.adcolony:2.1.5.11' // Assets/Appodeal/Editor/Dependencies/AdColonyDependencies.xml:10
-    implementation 'io.bidmachine:ads.networks.amazon:2.1.5.7' // Assets/Appodeal/Editor/Dependencies/BidMachineDependencies.xml:16
-    implementation 'io.bidmachine:ads.networks.criteo:2.1.5.10' // Assets/Appodeal/Editor/Dependencies/BidMachineDependencies.xml:17
+    implementation 'io.bidmachine:ads.networks.amazon:2.1.5.7' // Assets/Appodeal/Editor/Dependencies/BidMachineDependencies.xml:15
+    implementation 'io.bidmachine:ads.networks.criteo:2.1.5.10' // Assets/Appodeal/Editor/Dependencies/BidMachineDependencies.xml:16
     implementation 'io.bidmachine:ads.networks.my_target:2.1.5.9' // Assets/Appodeal/Editor/Dependencies/MyTargetDependencies.xml:10
-    implementation 'io.bidmachine:ads.networks.pangle:2.1.5.4' // Assets/Appodeal/Editor/Dependencies/BidMachineDependencies.xml:18
+    implementation 'io.bidmachine:ads.networks.pangle:2.1.5.4' // Assets/Appodeal/Editor/Dependencies/BidMachineDependencies.xml:17
     implementation 'io.bidmachine:ads.networks.vungle:2.1.5.2' // Assets/Appodeal/Editor/Dependencies/VungleDependencies.xml:10
-    implementation 'io.bidmachine:ads:2.1.5' // Assets/Appodeal/Editor/Dependencies/BidMachineDependencies.xml:15
+    implementation 'io.bidmachine:ads:2.1.5' // Assets/Appodeal/Editor/Dependencies/BidMachineDependencies.xml:14
     implementation 'io.sentry:sentry-android:6.11.0' // Assets/Appodeal/Editor/Dependencies/SentryAnalyticsDependencies.xml:8
     implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.7.10' // Assets/Appodeal/Editor/Dependencies/YandexDependencies.xml:11
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4' // Assets/Appodeal/Editor/Dependencies/YandexDependencies.xml:13

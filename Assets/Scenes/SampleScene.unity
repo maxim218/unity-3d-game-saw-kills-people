@@ -5658,6 +5658,19 @@ MonoBehaviour:
   PrefabRedPerson: {fileID: 6535090661329803145, guid: c7e213a9aa3995944891978ebb285880, type: 3}
   PrefabHakiWakiMonstr: {fileID: 2162429321143657067, guid: 45ddec69f24d81b4b81b50c913a914a9, type: 3}
   _labelLevelText: {fileID: 719668497}
+  _materialsArray:
+  - {fileID: 2100000, guid: 2bd8959f5fbd3644aa33af1a155fc147, type: 2}
+  - {fileID: 2100000, guid: aaa370c85db11dd46b20dbf13a0a0edd, type: 2}
+  - {fileID: 2100000, guid: 363e29eabd899a94e90d0d22195aefbc, type: 2}
+  - {fileID: 2100000, guid: 1b855c41e534a6149aaba707c28a3fc5, type: 2}
+  - {fileID: 2100000, guid: 1cf6f4c6e6e0518419839d3f5448dd99, type: 2}
+  - {fileID: 2100000, guid: c4e09a3280043784aaa18d8636fbe1a9, type: 2}
+  - {fileID: 2100000, guid: 3b09caf73c8301d4b8c964db76581cad, type: 2}
+  - {fileID: 2100000, guid: 3e14bd1190a0d3243b3d4ad91df56c29, type: 2}
+  - {fileID: 2100000, guid: cc421da483ed06c49933077a621bff25, type: 2}
+  - {fileID: 2100000, guid: 0d79801804dfedf4f8514ffdf1eeae8c, type: 2}
+  - {fileID: 2100000, guid: 803d15f926d8b5e4dba50fe3985bfa1a, type: 2}
+  - {fileID: 2100000, guid: 8ec0a1b4d4abb7e41b94be610b6c1b5c, type: 2}
 --- !u!114 &705507997
 MonoBehaviour:
   m_ObjectHideFlags: 0
