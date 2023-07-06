@@ -58,6 +58,13 @@ public class AdsSceneController : MonoBehaviour {
         _labelContinuePlaying.text = GetContinuePlayingText(_nextLevelPrice);
     }
 
+    private int GetNextCount() {
+        int count = PlayerPrefs.GetInt("COUNTER_INT_PLAYED", 0);
+        count++;
+        PlayerPrefs.SetInt("COUNTER_INT_PLAYED", count);
+        return count;
+    }
+
     void Start()  {
         CheckTotatMoneyIsPositive();
         InitPriceAndGotMoney();
@@ -69,8 +76,10 @@ public class AdsSceneController : MonoBehaviour {
         CheckTotatMoneyIsPositive();
 
         // appodeal
-        if (_levelNumber > 3) 
-            AppodealController.PublicRunIntersticial();
+        int count = GetNextCount();
+        if (count % 3 == 0)
+            if (_levelNumber > 3) 
+                AppodealController.PublicRunIntersticial();
     }
 
     private void HideAllBlocks() {
