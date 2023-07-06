@@ -42,6 +42,9 @@ public class ScoreControllerScript : MonoBehaviour {
         int resultStatistics = isHeroLose ? 0 : 1;
         AppodealController.AppodealEvent_level_finished(numStatistics, resultStatistics);
 
+        string resultInfoData = isHeroLose ? "LOSE" : "WIN";
+        PlayerPrefs.SetString("RESULT_WIN_LOSE_INFO_DATA", resultInfoData);
+
         if (isHeroLose) {
             const string one = "Your score";
             string two = _score + " / " + _length;

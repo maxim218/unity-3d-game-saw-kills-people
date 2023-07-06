@@ -99,6 +99,15 @@ public class AdsSceneController : MonoBehaviour {
         return count;
     }
 
+    private GameObject BeginBlockShowing() {
+        HideAllBlocks();
+        string resGame = PlayerPrefs.GetString("RESULT_WIN_LOSE_INFO_DATA", string.Empty);
+        if ("WIN" == resGame && _levelNumber % 2 > 0) 
+            return _blockD;
+        else
+            return _blockA;
+    }
+
     void Start()  {
         CheckTotatMoneyIsPositive();
         InitPriceAndGotMoney();
@@ -106,7 +115,7 @@ public class AdsSceneController : MonoBehaviour {
         InitTotalMoney();
         RenderLabels();
         HideAllBlocks();
-        _blockD.SetActive(true);
+        BeginBlockShowing().SetActive(true);
         CheckTotatMoneyIsPositive();
 
         try {
