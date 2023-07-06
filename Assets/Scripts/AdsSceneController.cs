@@ -20,6 +20,40 @@ public class AdsSceneController : MonoBehaviour {
 
     [SerializeField] private SceneLoader _sceneLoader = null;
 
+    [SerializeField] private GameObject _blockD = null;
+
+    [SerializeField] private Image _bladeImage = null;
+
+    [SerializeField] private Color [] _colorsMaterials = null;
+
+    private void SetBladeColor() {
+        try {
+            int indexNext = 1 + PlayerPrefs.GetInt("BLADE_COLOR_INDEX", 0);
+            indexNext %= 5;
+            _bladeImage.color = _colorsMaterials[indexNext];
+        } catch {
+            // empty
+        }
+    }
+
+    public void NoThanksButtonClick() {
+        HideAllBlocks();
+        _blockA.SetActive(true);
+    }
+
+    public void UseSkinBtnClick() {
+        try {
+            int indexNext = 1 + PlayerPrefs.GetInt("BLADE_COLOR_INDEX", 0);
+            indexNext %= 5;
+            PlayerPrefs.SetInt("BLADE_COLOR_INDEX", indexNext);
+            NoThanksButtonClick();
+            // appodeal
+            AppodealController.PublicRunIntersticial();
+        } catch {
+            // empty
+        }
+    }
+
     private int _levelNumber = 0;
     private int _money = 0;
     private int _totalMoney = 0;
@@ -72,8 +106,14 @@ public class AdsSceneController : MonoBehaviour {
         InitTotalMoney();
         RenderLabels();
         HideAllBlocks();
-        _blockA.SetActive(true);
+        _blockD.SetActive(true);
         CheckTotatMoneyIsPositive();
+
+        try {
+            SetBladeColor();
+        } catch {
+            // empty
+        }
 
         // appodeal
         int count = GetNextCount();
@@ -83,6 +123,7 @@ public class AdsSceneController : MonoBehaviour {
     }
 
     private void HideAllBlocks() {
+        _blockD.SetActive(false);
         _blockA.SetActive(false);
         _blockB.SetActive(false);
         _blockC.SetActive(false);
