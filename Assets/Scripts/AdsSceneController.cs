@@ -146,7 +146,7 @@ public class AdsSceneController : MonoBehaviour {
     }
     
     private int CalculatePriceForRunningNextLevel(int levelNumber) {
-        int price = (2 + levelNumber) * 5 + levelNumber * 4 + 2;
+        int price = (2 + levelNumber) * 5 + levelNumber * 3 + 2;
         return price;
     }
 
