@@ -48,7 +48,7 @@ public class AdsSceneController : MonoBehaviour {
             PlayerPrefs.SetInt("BLADE_COLOR_INDEX", indexNext);
             NoThanksButtonClick();
             // appodeal
-            AppodealController.PublicRunIntersticial();
+            AppodealController.PublicRunRewarderVideo();
         } catch {
             // empty
         }
@@ -151,15 +151,35 @@ public class AdsSceneController : MonoBehaviour {
     }
 
     private string GetGoldText(int value) {
-        string a = "Congratulations!";
-        string b = $"You earned {value} gold!";
-        return a + "\n" + b;
+        try {
+            ControlTextLabels scriptDict = FindObjectOfType<ControlTextLabels>();
+            if (scriptDict) {
+                scriptDict.InitContainer();
+                TranslationWordData wordData = scriptDict.GetElementByIdentifier("KEY_YOU_EARNED_GOLD");
+                return scriptDict.GetTextByLanguage(wordData) + " " + value;
+            }
+        } catch {
+            string a = "Congratulations!";
+            string b = $"You earned {value} gold!";
+            return a + "\n" + b;
+        }
+        return string.Empty;
     }
 
     private string GetContinuePlayingText(int value) {
-        string x = "Continue playing";
-        string y = $"Run this level price - {value} gold";
-        return x + "\n" + y;
+        try {
+            ControlTextLabels scriptDict = FindObjectOfType<ControlTextLabels>();
+            if (scriptDict) {
+                scriptDict.InitContainer();
+                TranslationWordData wordData = scriptDict.GetElementByIdentifier("KEY_CONTINUE_PLAYING_LABEL");
+                return scriptDict.GetTextByLanguage(wordData) + " - " + value;
+            }
+        } catch {
+            string x = "Continue playing";
+            string y = $"Run this level price - {value} gold";
+            return x + "\n" + y;
+        }
+        return string.Empty;
     }
 
     private int GetTotalMoney() {

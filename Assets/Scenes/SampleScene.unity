@@ -5559,6 +5559,7 @@ GameObject:
   - component: {fileID: 705507997}
   - component: {fileID: 705507998}
   - component: {fileID: 705507999}
+  - component: {fileID: 705508000}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -5713,6 +5714,25 @@ MonoBehaviour:
   activateMe: {fileID: 1083992185}
   deactivateMe: {fileID: 584221515}
   killingSawLabel: {fileID: 0}
+--- !u!114 &705508000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705507993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8fb7e133f6d8b341a3227ccd87145bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _textStart: {fileID: 0}
+  _getX2Gold: {fileID: 0}
+  _wathVideo: {fileID: 0}
+  _notEnoughMoney: {fileID: 0}
+  _okGood: {fileID: 0}
+  _changeSkin: {fileID: 0}
+  _useThisSkinBtn: {fileID: 0}
 --- !u!1 &719668495
 GameObject:
   m_ObjectHideFlags: 0

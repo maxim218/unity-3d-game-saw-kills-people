@@ -1,0 +1,76 @@
+{
+	"ContentArray": [
+		{
+			"KeyIdentifier": "KEY_START",
+			"Eng": "Start",
+			"Rus": "Играть",
+			"Tur": "Başlangıç"
+		},
+		{
+			"KeyIdentifier": "KEY_LEVEL",
+			"Eng": "Level",
+			"Rus": "Уровень",
+			"Tur": "Seviye"
+		},
+		{
+			"KeyIdentifier": "KEY_WINNER_TEXT",
+			"Eng": " You are winner \n Nice game \n Tap to continue ",
+			"Rus": " Победа \n Супер результат \n Клик для продолжения ",
+			"Tur": " Sen kazandın \n Güzel oyun \n Devam etmek için dokunun "
+		},
+		{
+			"KeyIdentifier": "KEY_LOSING_TEXT",
+			"Eng": " Tap to restart \n Your score ",
+			"Rus": " Клик для рестарта \n Ваши очки ",
+			"Tur": " Yeniden başlatmak için dokunun \n Puanın "
+		},
+		{
+			"KeyIdentifier": "KEY_X2_GOLD_GET",
+			"Eng": "Get x2 gold",
+			"Rus": "Взять x2 монет",
+			"Tur": "x2 altın al"
+		},
+		{
+			"KeyIdentifier": "KEY_WATCH_VIDEO_TO_GOLD",
+			"Eng": "Watch video ads to get gold",
+			"Rus": "Просмотр видео для получения монет",
+			"Tur": "Altın almak için video reklamları izleyin"
+		},
+		{
+			"KeyIdentifier": "KEY_YOU_EARNED_GOLD",
+			"Eng": "Congratulations! \n You earned gold",
+			"Rus": "Поздравляем! \n Вы заработали монет",
+			"Tur": "Tebrikler! \n Altın kazandın"
+		},
+		{
+			"KeyIdentifier": "KEY_CONTINUE_PLAYING_LABEL",
+			"Eng": "Continue playing \n Run this level price",
+			"Rus": "Продолжить игру \n Цена уровня в монетах",
+			"Tur": "Oynamaya devam et \n Bu seviye fiyatını çalıştır"
+		},
+		{
+			"KeyIdentifier": "KEY_NOT_ENOUGH_GOLD",
+			"Eng": "You have not enough gold \n You can get free gold",
+			"Rus": "У вас недостаточно монет \n Вы можете получить их бесплатно",
+			"Tur": "Yeterli altının yok \n Bedava altın alabilirsin"
+		},
+		{
+			"KeyIdentifier": "KEY_OK_GOOD",
+			"Eng": "Okay",
+			"Rus": "Хорошо",
+			"Tur": "Tamam"
+		},
+		{
+			"KeyIdentifier": "KEY_CHANGE_SKIN_LABEL",
+			"Eng": "Change skin by watching ads",
+			"Rus": "Сменить облик просмотрев видео",
+			"Tur": "Reklamları izleyerek cilt değiştirin"
+		},
+		{
+			"KeyIdentifier": "KEY_USE_THIS_SKIN",
+			"Eng": "Use",
+			"Rus": "Использовать",
+			"Tur": "Kullanmak"
+		}
+	]
+}

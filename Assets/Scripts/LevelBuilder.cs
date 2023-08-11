@@ -46,6 +46,15 @@ public class LevelBuilder : MonoBehaviour {
         if (_labelLevelText) {
             _labelLevelText.text = "Lv " + lv;
         }
+
+        try {
+            ControlTextLabels script = FindObjectOfType<ControlTextLabels>();
+            if (script) {
+                script.InitContainer();
+                TranslationWordData wordData = script.GetElementByIdentifier("KEY_LEVEL");
+                _labelLevelText.text = script.GetTextByLanguage(wordData) + " " + lv;
+            }
+        } catch { }
     }
 
     [SerializeField] private Material [] _materialsArray = null;
@@ -72,7 +81,6 @@ public class LevelBuilder : MonoBehaviour {
         }
 
         int numStatistics = LevelIndexManager.GetLevelIndex();
-        AppodealController.AppodealEvent_level_start(numStatistics);
 
         try {
             SetSkyBoxMaterial(numStatistics);

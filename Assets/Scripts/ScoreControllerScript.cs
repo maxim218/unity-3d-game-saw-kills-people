@@ -40,7 +40,6 @@ public class ScoreControllerScript : MonoBehaviour {
     public void FinalMessage(bool isHeroLose) {
         int numStatistics = LevelIndexManager.GetLevelIndex();
         int resultStatistics = isHeroLose ? 0 : 1;
-        AppodealController.AppodealEvent_level_finished(numStatistics, resultStatistics);
 
         string resultInfoData = isHeroLose ? "LOSE" : "WIN";
         PlayerPrefs.SetString("RESULT_WIN_LOSE_INFO_DATA", resultInfoData);
@@ -57,6 +56,21 @@ public class ScoreControllerScript : MonoBehaviour {
             finalResultTextComponent.text = lineA + '\n' + lineB + '\n' + lineC; 
             LevelIndexManager.MakeNextLevelIndex();
         }
+
+        try {
+            ControlTextLabels scriptDict = FindObjectOfType<ControlTextLabels>();
+            if (scriptDict) {
+                scriptDict.InitContainer();
+                if (isHeroLose) {
+                    string resultStringScore = _score + " / " + _length;
+                    TranslationWordData wordData = scriptDict.GetElementByIdentifier("KEY_LOSING_TEXT");
+                    finalResultTextComponent.text = scriptDict.GetTextByLanguage(wordData) + "\n" + resultStringScore;
+                } else {
+                    TranslationWordData wordData = scriptDict.GetElementByIdentifier("KEY_WINNER_TEXT");
+                    finalResultTextComponent.text = scriptDict.GetTextByLanguage(wordData);
+                }
+            }
+        } catch { }
 
         MyJoystickControl script = FindObjectOfType<MyJoystickControl>();
         if (script) script.JoystickDeactivateOnScreen();

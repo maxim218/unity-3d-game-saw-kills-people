@@ -823,7 +823,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 95}
-  m_SizeDelta: {x: 1000, y: 220}
+  m_SizeDelta: {x: 1200, y: 220}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &539129275
 MonoBehaviour:
@@ -1240,6 +1240,7 @@ GameObject:
   - component: {fileID: 873910622}
   - component: {fileID: 873910621}
   - component: {fileID: 873910620}
+  - component: {fileID: 873910623}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1312,6 +1313,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -32.684, y: 0, z: 0}
+--- !u!114 &873910623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 873910619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8fb7e133f6d8b341a3227ccd87145bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _textStart: {fileID: 945689569}
+  _getX2Gold: {fileID: 1373178243}
+  _wathVideo: {fileID: 945964933}
+  _notEnoughMoney: {fileID: 1964872224}
+  _okGood: {fileID: 1657996857}
+  _changeSkin: {fileID: 75138749}
+  _useThisSkinBtn: {fileID: 2002987010}
 --- !u!1 &945689567
 GameObject:
   m_ObjectHideFlags: 0
@@ -1371,11 +1391,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: aad86627bc0743749941629798c9b990, type: 3}
-    m_FontSize: 40
+    m_FontSize: 46
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 4
-    m_MaxSize: 40
+    m_MinSize: 3
+    m_MaxSize: 46
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -1426,7 +1446,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -204}
-  m_SizeDelta: {x: 450, y: 60}
+  m_SizeDelta: {x: 550, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &945964933
 MonoBehaviour:
@@ -2105,7 +2125,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: aad86627bc0743749941629798c9b990, type: 3}
-    m_FontSize: 40
+    m_FontSize: 36
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -2647,67 +2667,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
---- !u!1001 &1945574160
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 6855011472829320904, guid: ea24017bbf8669b4f8b39eb716285909, type: 3}
-      propertyPath: targetCamera
-      value: 
-      objectReference: {fileID: 873910619}
-    - target: {fileID: 6855011472829320905, guid: ea24017bbf8669b4f8b39eb716285909, type: 3}
-      propertyPath: m_Name
-      value: MusicLongSongBackground
-      objectReference: {fileID: 0}
-    - target: {fileID: 6855011472829320911, guid: ea24017bbf8669b4f8b39eb716285909, type: 3}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 6855011472829320911, guid: ea24017bbf8669b4f8b39eb716285909, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6855011472829320911, guid: ea24017bbf8669b4f8b39eb716285909, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6855011472829320911, guid: ea24017bbf8669b4f8b39eb716285909, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6855011472829320911, guid: ea24017bbf8669b4f8b39eb716285909, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6855011472829320911, guid: ea24017bbf8669b4f8b39eb716285909, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6855011472829320911, guid: ea24017bbf8669b4f8b39eb716285909, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6855011472829320911, guid: ea24017bbf8669b4f8b39eb716285909, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6855011472829320911, guid: ea24017bbf8669b4f8b39eb716285909, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6855011472829320911, guid: ea24017bbf8669b4f8b39eb716285909, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6855011472829320911, guid: ea24017bbf8669b4f8b39eb716285909, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: ea24017bbf8669b4f8b39eb716285909, type: 3}
 --- !u!1 &1964872222
 GameObject:
   m_ObjectHideFlags: 0
@@ -2743,7 +2702,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 106}
-  m_SizeDelta: {x: 1000, y: 250}
+  m_SizeDelta: {x: 1200, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1964872224
 MonoBehaviour:
@@ -2848,10 +2807,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: aad86627bc0743749941629798c9b990, type: 3}
-    m_FontSize: 50
+    m_FontSize: 46
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 5
+    m_MinSize: 4
     m_MaxSize: 90
     m_Alignment: 1
     m_AlignByGeometry: 0
@@ -2927,7 +2886,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: aad86627bc0743749941629798c9b990, type: 3}
-    m_FontSize: 44
+    m_FontSize: 38
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
